@@ -1,6 +1,6 @@
 {
-  "name": "editorjs-paragraph-with-alignment",
-  "version": "3.0.1",
+  "name": "@medistream/editorjs-paragraph-with-alignment",
+  "version": "3.1.0",
   "keywords": [
     "codex editor",
     "paragraph",
@@ -10,16 +10,16 @@
   ],
   "description": "Paragraph Tool with alignment for Editor.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kaaaaaaaaaaai/paragraph-with-alignment.git"
+  "repository": "https://github.com/medistream-team/editorjs-paragraph-with-alignment",
+  "author": {
+      "name": "medistream.team",
+      "email": "medistream.team@gmail.com"
   },
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development --watch"
   },
-  "author": "kaaaaaaaaaaai <kaiogita+npm@gmail.com>",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
@@ -30,10 +30,6 @@
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
   },
-  "bugs": {
-    "url": "https://github.com/kaaaaaaaaaaai/paragraph-with-alignment/issues"
-  },
-  "homepage": "https://github.com/kaaaaaaaaaaai/paragraph-with-alignment#readme",
   "directories": {
     "example": "example"
   },
