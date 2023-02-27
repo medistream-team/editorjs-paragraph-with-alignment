@@ -123,11 +123,8 @@ class Paragraph {
              */
             const button = document.createElement('div');
             button.classList.add('medistream-settings-button');
-            button.innerHTML = tune.icon;
-
             button.classList.toggle(this.CSS.settingsButtonActive, tune.name === this.data.alignment);
-
-            wrapper.appendChild(button);
+            button.innerHTML = tune.icon;
 
             return button;
         })
