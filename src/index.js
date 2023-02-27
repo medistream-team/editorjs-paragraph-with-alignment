@@ -115,6 +115,41 @@ class Paragraph {
 
     }
 
+    $renderSettings() {
+        const buttons = this.settings.map(tune => {
+            /**
+             * buttonのdomを作成して、alignのtoggleをactiveに設定する
+             * @type {HTMLDivElement}
+             */
+            const button = document.createElement('div');
+            button.classList.add('medistream-settings-button');
+            button.innerHTML = tune.icon;
+
+            button.classList.toggle(this.CSS.settingsButtonActive, tune.name === this.data.alignment);
+
+            wrapper.appendChild(button);
+
+            return button;
+        })
+
+        buttons.forEach((element, index, elements) => {
+
+            element.addEventListener('click', () => {
+
+                this._toggleTune(this.settings[index].name);
+
+                elements.forEach((el, i) => {
+                    const {name} = this.settings[i];
+                    el.classList.toggle(this.CSS.settingsButtonActive, name === this.data.alignment);
+                    //paragraphのdivにalignmentのclassをつける。
+                    this._element.classList.toggle(this._CSS.alignment[name], name === this.data.alignment)
+                });
+            });
+        });
+
+        window.$pluginMethods = buttons
+    }
+
     /**
      * Check if text content is empty and set empty string to inner html.
      * We need this because some browsers (e.g. Safari) insert <br> into empty contenteditanle elements
